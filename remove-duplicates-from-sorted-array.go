@@ -3,28 +3,28 @@ package main
 import "fmt"
 
 // Array slicing
-//func removeDuplicates(nums []int) int {
-//	for i := 0; i < len(nums)-1; {
-//		if nums[i] == nums[i+1] {
-//			nums = append(nums[:i+1], nums[i+2:]...)
-//		} else {
-//			i++
-//		}
-//	}
-//	return len(nums)
-//}
-
-// one loop
 func removeDuplicates(nums []int) int {
-	i := 0
-	for j := range nums {
-		if nums[i] != nums[j] {
+	for i := 0; i < len(nums)-1; {
+		if nums[i] == nums[i+1] {
+			nums = append(nums[:i+1], nums[i+2:]...)
+		} else {
 			i++
-			nums[i] = nums[j]
 		}
 	}
-	return i + 1
+	return len(nums)
 }
+
+// one loop
+//func removeDuplicates(nums []int) int {
+//	i := 0
+//	for j := range nums {
+//		if nums[i] != nums[j] {
+//			i++
+//			nums[i] = nums[j]
+//		}
+//	}
+//	return i + 1
+//}
 
 func main() {
 	nums := []int{1, 1, 2}
