@@ -25,7 +25,7 @@ package main
 //	return 0
 //}
 
-func maxProfit(prices []int) int {
+func maxProfit1(prices []int) int {
 	buyPrice := prices[0]
 	maximumProfit := 0
 	for day := 1; day < len(prices); day++ {
@@ -51,6 +51,6 @@ func main() {
 	//prices := []int{3, 3, 5, 0, 0, 3, 1, 4}
 	prices := []int{3, 2, 6, 5, 0, 3}
 
-	maxProfit := maxProfit(prices)
+	maxProfit := maxProfit1(prices)
 	println(maxProfit)
 }
